@@ -59,9 +59,9 @@
 
 
 ########################################################################################################################
-library(ape)
-library(devtools)
-library(tidyverse)
+require(ape)
+require(devtools)
+require(tidyverse)
 
 trimFlankingSeqstoProperPadding <- function(dat,martFlank = 100, minLength = 200, OUTPUT, name="GeneNameThenTranscriptID") {
   
