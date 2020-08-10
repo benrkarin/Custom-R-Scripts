@@ -101,6 +101,11 @@ trimFlankingSeqstoProperPadding <- function(dat,martFlank = 100, minLength = 200
       backUTR <- frontUTR2
     }
     
+	if (trimUTR == F) {
+      CDSLength <- exonLength
+      frontUTR <- 0
+      backUTR <- 0
+    }
     
     
     #Figure out padding on either side if needed to get to minLength, otherwise trim to CDS
