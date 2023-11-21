@@ -1,10 +1,11 @@
 #Pad Bed coordinates
 
-
+## DEPENDENCIES
+#Must have bedtools installed in path (or adjust line 19)
 
 #USAGE
-#setwd("~/Dropbox/Berkeley_Research/BIRDS/Functional-Genes/yusef/extract")
-#bedPadMergeReorderRenumberMinLength(bed="significant_cor_regions.bed", output = "paddedtest.bed", shortExonLength = 200, shortExonBuffer = 100, longExonBuffer = 50, mergeDistance = 400)
+#setwd("~/PATH/TO/WORK/DIR")
+#bedToolsMergethenPad(bed="significant_cor_regions.bed", mergeDistance = 400, shortExonLength = 200, longExonBuffer = 0)
   
 
 bedToolsMergethenPad <- function(bed, mergeDistance = 400, shortExonLength = 200, longExonBuffer = 0, reorder=F) {
