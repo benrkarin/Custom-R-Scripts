@@ -6,7 +6,23 @@
 #USAGE
 #setwd("~/PATH/TO/WORK/DIR")
 #bedToolsMergethenPad(bed="significant_cor_regions.bed", mergeDistance = 400, shortExonLength = 200, longExonBuffer = 0)
-  
+
+## INPUT - a bed file with a name column (4th) and a strandedness column (6th)
+# EXAMPLE:
+#NC_056522.1	296640	296712	MPV17_exon_1	NA	-
+#NC_056522.1	278635	278750	MPV17_exon_2	NA	-
+#NC_056522.1	278429	278521	MPV17_exon_3	NA	-
+#NC_056522.1	392565	392649	KHK_exon_1	NA	-
+#NC_056522.1	387525	387669	KHK_exon_2	NA	-
+
+#OUTPUT
+# same name as input bud with "-merged-padded" added to name
+
+# NEXT STEPS
+# use getFastaFromBed() to extract the fasta from the new bed file. See getFastaFromBed.R
+# getFastaFromBed(genome = "path/to/genome", bed = bedfile.bed)
+
+
 
 bedToolsMergethenPad <- function(bed, mergeDistance = 400, shortExonLength = 200, longExonBuffer = 0, reorder=F) {
   filenamenoext <- strsplit(bed,".bed")[[1]]
@@ -94,8 +110,5 @@ bedToolsMergethenPad <- function(bed, mergeDistance = 400, shortExonLength = 200
   
 }
 
-
-#bedToolsMergethenPad(bed=bed, reorder = T)
-#getFastaFromBed(genome = paste0(genome.dir,genome), bed = paste0(filenamenoext,"-merged-padded-reordered.bed"), strandedness = T, bedName = T)
 
 
