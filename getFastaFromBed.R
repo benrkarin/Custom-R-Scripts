@@ -1,8 +1,11 @@
 # bedtools get fasta from bed
 
 #usage
-#getFastaFromBed(genome = genome, bed = "hypoxia-exons-padded-mergeClose.bed", output = "hypoxia-TaeGut.fasta", strandedness = T)
+#genomepath="PATH/TO/GENOME.fas"
+#setwd("/PATH/TO/OUTFOLDER")
+#getFastaFromBed(genome = genomepath, bed = "hypoxia-exons-padded-mergeClose.bed")
 
+#Output will be same name as .bed file but extension changed to .fasta
 
 # REQUIRES bedtools installed in command line path
 
